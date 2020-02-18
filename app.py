@@ -4,12 +4,12 @@ import os
 app = Flask(__name__)
 
 
-@app.route("/")
+@app.route("/hi")
 def hello():
     return "hi"
 
 
-@app.route('/hi')
+@app.route('/index')
 def index():
     # 将模板内容响应给用户
     return render_template('index.html')
@@ -17,7 +17,7 @@ def index():
     # return render_template_string('<h1 style="color:green;font-size:18px;">原谅色</h1>')
 
 
-@app.route('/pubu')
+@app.route('/')
 def pubu():
     # 将模板内容响应给用户
     return render_template('pubu.html')
