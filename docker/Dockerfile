@@ -3,7 +3,8 @@ FROM python:3.7-alpine
 MAINTAINER xw.hu <xw.hu@tianrang-inc.com>
 
 COPY requirements.txt /tmp/
-RUN pip install -r /tmp/requirements.txt -i http://mirrors.aliyun.com/pypi/simple --trusted-host mirrors.aliyun.com && rm -rf /tmp/*
+#RUN pip install -r /tmp/requirements.txt -i http://mirrors.aliyun.com/pypi/simple --trusted-host mirrors.aliyun.com && rm -rf /tmp/*
+RUN pip install -r /tmp/requirements.txt && rm -rf /tmp/*
 
 RUN echo "net.core.somaxconn=65535" >> /etc/sysctl.conf
 
